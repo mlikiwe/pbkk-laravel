@@ -51,7 +51,7 @@ Setiap route akan return page sesuai dengan nama view nya.
 ### Tailwind UI
 Setelah dibuat view nya, maka selanjutnya kita akan mempercantik tampilan pada setiap page nya menggunakan CSS. Di sini, kita akan menggunakan Tailwind CSS dan akan memanfaatkan template di halaman Tailwind UI. Di sini, saya akan memanfaatkan Tailwind untuk bagian navbar. Kita tinggal copy paste code yang telah tersedia ke setiap page kita dan menyesuaikan tampilannya sedikit sesuai keinginan kita. Namun, jika kita copy paste untuk semua page, akan terjadi redundansi yang akan sangat merepotkan. Maka, selanjutnya kita akan memanfaatkan fitur laravel yakni blade component.
 
-### Blade Component
+### Menggunakan Blade dan Blade Component
 Agar tampilan code kita lebih simple dan dinamis, kita akan memanfaatkan blade component. Jadi, kita akan membuat component baru bernama ```Navbar``` dan di dalamnya kita isi dengan navbar dari tailwind ui tadi. Lalu, pada setiap page, kita tinggal memanggil component navbar tadi sehigga code jadi tidak terlalu panjang. Selain navbar, saya juga menambahkan component, diantaranya
 - ```layout.blade.php``` Component ini berfungsi untuk menyimpan konten HTML dari setiap page, sehingga konfigurasi HTML pada setiap page akan selalu sama. Ketika kita nanti memanggil component ini, kita tinggal menambahkan konten pada setiap page sesuai keinginan kita.
 - ```nav-link.blade.php``` Component ini berisi fungsi laravel untuk menambahkan perilaku navbar saat hover ataupun saat kita berada pada page yang bersangkutan
