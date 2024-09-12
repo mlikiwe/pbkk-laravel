@@ -13,15 +13,17 @@ Link Tutorial
 [https://www.youtube.com/watch?v=T1TR-RGf2Pw&list=PLFIM0718LjIW1Xb7cVj7LdAr32ATDQMdr](https://www.youtube.com/watch?v=T1TR-RGf2Pw&list=PLFIM0718LjIW1Xb7cVj7LdAr32ATDQMdr)
 
 Daftar Isi
-- Menambahkan Route dan View
-- Tailwind UI
-- Menggunakan Blade dan Blade Component
+- [Menambahkan Route dan View](#menambahkan-route-dan-view)
+- [Tailwind UI](#tailwind-ui)
+- [Menggunakan Blade dan Blade Component](#menggunakan-blade-dan-blade-component)
 
 ### Menambahkan Route dan View
 Pada bagian ini, saya mengikuti tutorial yang diberikan dengan menambahkan route pada ```web.php```. Route yang saya tambahkan adalah home, blog, about, dan contact. Lalu, masing-masing kita buat view nya sehingga kurang lebih tampilannya akan seperti ini.
+
 ![image](https://drive.google.com/uc?export=download&id=1-wyqEpL64e9CdCgdIg-_cXvc2vEM3QNa)
 
 Sementara itu, berikut adalah tampilan dari ```web.php``` setelah dimodifikasi.
+
 ```php 
 <?php
 
