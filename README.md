@@ -5,8 +5,7 @@
 | 5025221167 | Ivan Fairuz Adinata |
 
 # Dokumentasi Tugas PBKK Laravel
-# UPDATE !!!
-## [Model Factories](#model-factories)
+# UPDATE !!! [Model Factories](#model-factories)
 
 </div>
 
