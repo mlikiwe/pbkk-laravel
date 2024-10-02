@@ -10,7 +10,7 @@
                 <h2 class="mb-l text-3xl tracking-tight font-bold text-white">{{$post['title']}}</h2>
             </a>
             <div class="text-base text-gray-500">
-                <a href="#">{{$post['author']}}</a> | {{$post->created_at->diffForHumans()}}
+                <a href="/authors/{{$post->author->id}}" class="hover:underline">{{$post->author->name}} </a> | {{$post->created_at->diffForHumans()}}
             </div>
             <p class="my-4 font-light text-white">{{Str::limit($post['body'], 100)}}</p>
             <a href="/posts/{{$post['slug']}}" class="font-medium text-white hover:underline">Read More &raquo;</a>
