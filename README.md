@@ -5,7 +5,7 @@
 | 5025221167 | Ivan Fairuz Adinata |
 
 # Dokumentasi Tugas PBKK Laravel
-# UPDATE !!! [Eloquent Relationship](#eloquent-relationship)
+# UPDATE !!! [Post Categories](#post-categories)
 
 </div>
 
@@ -21,6 +21,7 @@ Daftar Isi
 - [Eloquent ORM & Post Model](#eloquent-orm-&-post-model)
 - [Model Factories](#model-factories)
 - [Eloquent Relationship](#eloquent-relationship)
+- [Post Categories](#post-categories)
 
 ### Menambahkan Route dan View
 Pada bagian ini, saya mengikuti tutorial yang diberikan dengan menambahkan route pada ```web.php```. Route yang saya tambahkan adalah home, blog, about, dan contact. Lalu, masing-masing kita buat view nya sehingga kurang lebih tampilannya akan seperti ini.
@@ -97,3 +98,9 @@ Setelah dapat generate artikel dan author random dengan faker, saat ini kita aka
 ![image](https://drive.google.com/uc?export=download&id=13IPBQy0sTYYexGv3MDtjOpLEvO1D3BDE)
 ![image](https://drive.google.com/uc?export=download&id=1Vq-_8XUxtC4YP5N-soKB0N82LyBa35G8)
 ![image](https://drive.google.com/uc?export=download&id=1Q-bIzDza4n7nozPLHfSinHy7hfhZC8IJ)
+
+### Post Categories
+Dalam section kali ini, kita akan menambahkan kategori di tiap artikel yang telah kita buat sebelumnya. Yang pertama kali dilakukan adalah membuat model baru, yakni Categories, sekaligus dengan membuat factory dan migrasi nya sekaligus dengan menggunakan ```php artisan make:model Category -mf```. Setelah kita membuat ketiganya, kita perlu membuat kategori ini terhubung ke dalam model dan tabel post. Caranya, kita konfigurasi di dalam file model di mana kita menambah relasi hasMany dan belongsTo di model Post dan model Categories. Selanjutnya, untuk factory nya, kita tambahkan 2 hal, yakni faker untuk sentence dan slug nya. Yang terakhir adalah mengonfigurasi migrasi Post agar memiliki foreign key yang reference ke tabel Categories dengan menambahkan foreignId dan menghubungkannya ke ```category_id``` di tabel category. Setelah semua dikonfigurasi, terakhir kita tinggal mengatur posts.blade dan route yang menuju ke slug dari category, di mana nantinya akan ada fitur di mana ketika kita klik kategori nya, akan tampil seluruh artikel dengan kategori tersebut.
+
+![image](https://drive.google.com/uc?export=download&id=1JC4EMe7NXJ6Q4F8WGP4e6YzNuq22RFBU)
+![image](https://drive.google.com/uc?export=download&id=1gd2W8GxnwuA3NLOo4Lu61xY0g_O3xAcH)
