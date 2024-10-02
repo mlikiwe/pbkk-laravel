@@ -5,7 +5,7 @@
 | 5025221167 | Ivan Fairuz Adinata |
 
 # Dokumentasi Tugas PBKK Laravel
-# UPDATE !!! [Database Seeder](#database-seeder)
+# UPDATE !!! [N+1 Problem](#n+1-problem)
 
 </div>
 
@@ -23,6 +23,7 @@ Daftar Isi
 - [Eloquent Relationship](#eloquent-relationship)
 - [Post Categories](#post-categories)
 - [Database Seeder](#database-seeder)
+- [N+1 Problem](#n+1-problem)
 
 ### Menambahkan Route dan View
 Pada bagian ini, saya mengikuti tutorial yang diberikan dengan menambahkan route pada ```web.php```. Route yang saya tambahkan adalah home, blog, about, dan contact. Lalu, masing-masing kita buat view nya sehingga kurang lebih tampilannya akan seperti ini.
@@ -112,3 +113,6 @@ Setelah sebelumnya kita selalu memakai bantuan tinker untuk memasukkan hasil fac
 ![image](https://drive.google.com/uc?export=download&id=1VyFhimp0obauke_YN0U85_hBNA5bnFEL)
 ![image](https://drive.google.com/uc?export=download&id=1iEPNktCVBBXijTY4mcUumYRBGkGF0YQ2)
 ![image](https://drive.google.com/uc?export=download&id=1pQL8tKJMnJpqFnKmVLzIscwAm3_FQCKN)
+
+### N+1 Problem
+Pada section ini, kita akan mengatasi masalah query yang sangat banyak ketika kita melakukan looping di halaman Post kita untuk menampilkan seluruh artikel. Dengan kita merelasikan tabel, maka nantinya akan terjadi lazy loading. Untuk mengatasinya, di laravel ada sesuatu yang bernama eager loading yang merupakan kebalikan dari lazy loading. Cara menerapkannya pun ada beberapa cara. Yang pertama, kita dapat menuliskannnya di route. Jadi di setiap route, kita tambahkan keyword ```with``` ataupun ```load``` jika parent model nya sudah terpanggil sebelumnya. Opsi yang lain adalah dengan langsung mengonfigurasinya di dalam model. Jadi, di dalam model ```Post``` kita, akan ditambahkan variabel ```protected $with``` yang akan diisi dengan relasi apa saja yang mau dijalankan dengan eager loading, di sini adalah category dan author. Terakhir, kita dapat mencegah orang lain menjalankan lazy loading di dalam project kita apabila kita sedang dalam project bersama. Hal itu dapat dilakukan dengan memodifikasi ```AppServiceProvider``` dengan menambahkan baris ```Model::preventLazyLoading();``` ke dalam method ```boot()```.
