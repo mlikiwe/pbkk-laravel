@@ -5,7 +5,7 @@
 | 5025221167 | Ivan Fairuz Adinata |
 
 # Dokumentasi Tugas PBKK Laravel
-# UPDATE !!! [Post Categories](#post-categories)
+# UPDATE !!! [Database Seeder](#database-seeder)
 
 </div>
 
@@ -22,6 +22,7 @@ Daftar Isi
 - [Model Factories](#model-factories)
 - [Eloquent Relationship](#eloquent-relationship)
 - [Post Categories](#post-categories)
+- [Database Seeder](#database-seeder)
 
 ### Menambahkan Route dan View
 Pada bagian ini, saya mengikuti tutorial yang diberikan dengan menambahkan route pada ```web.php```. Route yang saya tambahkan adalah home, blog, about, dan contact. Lalu, masing-masing kita buat view nya sehingga kurang lebih tampilannya akan seperti ini.
@@ -104,3 +105,10 @@ Dalam section kali ini, kita akan menambahkan kategori di tiap artikel yang tela
 
 ![image](https://drive.google.com/uc?export=download&id=1JC4EMe7NXJ6Q4F8WGP4e6YzNuq22RFBU)
 ![image](https://drive.google.com/uc?export=download&id=1gd2W8GxnwuA3NLOo4Lu61xY0g_O3xAcH)
+
+### Database Seeder
+Setelah sebelumnya kita selalu memakai bantuan tinker untuk memasukkan hasil factory ke dalam database kita, sekarang kita akan berpindah menggunakan database seeder. Pada database seeder, kita bisa menuliskan secara manual data-data yang ingin kita masukkan ke dalam database ataupun kita dapat menggunakan factory seperti sebelumnya. Pada ssection ini, saya menambahkan kategori secara manual ke dalam file seeder baru yakni CategorySeeder dan saya juga memasukkan beberapa user dengan gabungan metode faker dan manual ke dalam UserSeeder. Selanjutnya, kita tinggal memanggil kedua file seeder tadi di file ```DatabaseSeeder``` untuk di recycle.
+
+![image](https://drive.google.com/uc?export=download&id=1VyFhimp0obauke_YN0U85_hBNA5bnFEL)
+![image](https://drive.google.com/uc?export=download&id=1iEPNktCVBBXijTY4mcUumYRBGkGF0YQ2)
+![image](https://drive.google.com/uc?export=download&id=1pQL8tKJMnJpqFnKmVLzIscwAm3_FQCKN)
