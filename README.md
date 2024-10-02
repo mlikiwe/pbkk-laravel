@@ -23,7 +23,7 @@ Daftar Isi
 - [Eloquent Relationship](#eloquent-relationship)
 - [Post Categories](#post-categories)
 - [Database Seeder](#database-seeder)
-- [N+1 Problem](#n+1-problem)
+- [N+1 Problem](#n-+-1-problem)
 
 ### Menambahkan Route dan View
 Pada bagian ini, saya mengikuti tutorial yang diberikan dengan menambahkan route pada ```web.php```. Route yang saya tambahkan adalah home, blog, about, dan contact. Lalu, masing-masing kita buat view nya sehingga kurang lebih tampilannya akan seperti ini.
