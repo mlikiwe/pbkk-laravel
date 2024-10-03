@@ -5,7 +5,7 @@
 | 5025221167 | Ivan Fairuz Adinata |
 
 # Dokumentasi Tugas PBKK Laravel
-# UPDATE !!! [N+1 Problem](#n+1-problem)
+# UPDATE !!! [Redesign UI & Searching & Pagination](redesign-ui-&-searching-&-pagination)
 
 </div>
 
@@ -24,6 +24,7 @@ Daftar Isi
 - [Post Categories](#post-categories)
 - [Database Seeder](#database-seeder)
 - [N+1 Problem](#n-+-1-problem)
+- [Redesign UI + Searching + Pagination](redesign-ui-+-searching-+-pagination)
 
 ### Menambahkan Route dan View
 Pada bagian ini, saya mengikuti tutorial yang diberikan dengan menambahkan route pada ```web.php```. Route yang saya tambahkan adalah home, blog, about, dan contact. Lalu, masing-masing kita buat view nya sehingga kurang lebih tampilannya akan seperti ini.
@@ -116,3 +117,13 @@ Setelah sebelumnya kita selalu memakai bantuan tinker untuk memasukkan hasil fac
 
 ### N+1 Problem
 Pada section ini, kita akan mengatasi masalah query yang sangat banyak ketika kita melakukan looping di halaman Post kita untuk menampilkan seluruh artikel. Dengan kita merelasikan tabel, maka nantinya akan terjadi lazy loading. Untuk mengatasinya, di laravel ada sesuatu yang bernama eager loading yang merupakan kebalikan dari lazy loading. Cara menerapkannya pun ada beberapa cara. Yang pertama, kita dapat menuliskannnya di route. Jadi di setiap route, kita tambahkan keyword ```with``` ataupun ```load``` jika parent model nya sudah terpanggil sebelumnya. Opsi yang lain adalah dengan langsung mengonfigurasinya di dalam model. Jadi, di dalam model ```Post``` kita, akan ditambahkan variabel ```protected $with``` yang akan diisi dengan relasi apa saja yang mau dijalankan dengan eager loading, di sini adalah category dan author. Terakhir, kita dapat mencegah orang lain menjalankan lazy loading di dalam project kita apabila kita sedang dalam project bersama. Hal itu dapat dilakukan dengan memodifikasi ```AppServiceProvider``` dengan menambahkan baris ```Model::preventLazyLoading();``` ke dalam method ```boot()```.
+
+### Redesign UI & Searching & Pagination
+Section ini sejauh ini merupakan section akhir dari tutorial laravel11. Jadi, di sini, kita akan menambahkan fitur searching dan pagination, serta mengubah beberapa tampilan di halaman posts sehingga lebih bagus. Untuk searching, kita dapat mencari nya berdasarkan keyword judul secara wildcard. Lalu, sekarang, apabila kita klik di kategori dan author, tidak akan diarahkan ke halaman lain, namun tetap di halaman posts. Jumlah tampilan posts juga dibatasi sekarang menggunakan pagination. Jadi, dalam satu halaman posts hanya akan menyimpan 9 artikel saja menggunakan card. Pagination yang digunakan ialah fitur yang langsung disediakan laravel berbasis tailwind, jadi kita tidak perlu membuat pagination nya dari awal.
+
+![image](https://drive.google.com/uc?export=download&id=1iT8hHOqT--RuJBZ28YRxQhBdllsGFk87)
+![image](https://drive.google.com/uc?export=download&id=1wfoIrXAHdRGXceKHFzCuOk7eol0GVhFt)
+![image](https://drive.google.com/uc?export=download&id=1YVrlcJrqMqoztoQJXGDOAaFSt-nlMpY2)
+![image](https://drive.google.com/uc?export=download&id=1MbvIpjfEn-8woBSENhvjzsLlXoUVPXR8)
+
+
