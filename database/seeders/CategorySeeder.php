@@ -16,28 +16,33 @@ class CategorySeeder extends Seeder
         // Category::factory(3)->create();
 
         Category::create([
-            "name"=> "Information Technology",
-            "slug"=> "information-technology",
+            'name'=> 'Information Technology',
+            'slug'=> 'information-technology',
+            'color' => 'blue'
         ]);
 
         Category::create([
-            "name"=> "Lifestyle",
-            "slug"=> "lifestyle",
+            'name'=> 'Lifestyle',
+            'slug'=> 'lifestyle',
+            'color' => 'green'
         ]);
 
         Category::create([
-            "name"=> "Gaming",
-            "slug"=> "gaming",
+            'name'=> 'Gaming',
+            'slug'=> 'gaming',
+            'color' => 'purple'
         ]);
 
         Category::create([
-            "name"=> "Social and Politics",
-            "slug"=> "social-and-politics",
+            'name'=> 'Social and Politics',
+            'slug'=> 'social-and-politics',
+            'color' => 'red'
         ]);
 
         Category::create([
-            "name"=> "Education",
-            "slug"=> "education",
+            'name'=> 'Education',
+            'slug'=> 'education',
+            'color' => 'yellow'
         ]);
     }
 }
